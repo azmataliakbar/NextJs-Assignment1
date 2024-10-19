@@ -26,14 +26,14 @@ function  Home() {
         We strive to respond to all messages within 24-48 hours. If you prefer a more personal touch, you can visit us at our office during business hours. Stay connected with us on social media for the latest updates, announcements, and more. Your feedback helps us improve, so do not hesitate to share your thoughts. We look forward to connecting with you and building a strong relationship. Thank you for choosing us, and we are here to help in any way we can!
         </p>
         <p className="text-yellow-300 font-bold text-center text-2xl mb-10"> Visit us: Super Motors: P-81  PECHS  Khalid Bin Waleed Road Karachi</p>
-        <ul className="ml-4">
+        <ul className="ml-4 text-white">
           <li>Robert Peterson</li>
           <li>Director Marketing</li>
           <li>abc@supermotor.com</li>
           <li>00-01-777-235-1234</li>
         </ul>
         <br />
-        <ul className="ml-4">
+        <ul className="ml-4 text-white">
           <li>Michel Anthony</li>
           <li>Manager Marketing</li>
           <li>jkl@supermotor.com</li>
