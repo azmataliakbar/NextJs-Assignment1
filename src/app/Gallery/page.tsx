@@ -45,29 +45,34 @@ function Home() {
         </p>
 
         {/* Swiper Image Slider */}
-        <div className="my-10 flex justify-center w-full"> {/* Centering the Swiper and making it responsive */}
+<div className="my-10 flex justify-center w-full">
   <Swiper
     spaceBetween={30}
     pagination={{ clickable: true }}
     navigation={true}
-    modules={[Navigation, Pagination]} // Include Navigation and Pagination modules
+    modules={[Navigation, Pagination]}
+    observer={true} // Add this
+    observeParents={true} // Add this
     className="mySwiper"
   >
     {carImages.map((image, index) => (
-      <SwiperSlide key={index} className="flex justify-center items-center"> {/* Centering each slide */}
-        <div className="relative w-full h-[150px] lg:w-[800px] lg:h-[400px] flex justify-center items-center mx-auto">
+      <SwiperSlide key={index} className="flex justify-center items-center">
+        <div className="relative w-full h-[200px] md:w-[600px] md:h-[300px] lg:w-[800px] lg:h-[400px] flex justify-center items-center mx-auto">
           <Image
             src={image}
             alt={`Car ${index + 1}`}
             className="object-cover rounded-lg"
-            layout="fill" // Use fill layout for better control with a wrapper
-            objectFit="cover" // Ensures the image covers the space without distortion
+            width={800} // Provide a fixed width
+            height={400} // Provide a fixed height
+            layout="responsive"
+            objectFit="cover"
           />
         </div>
       </SwiperSlide>
     ))}
   </Swiper>
 </div>
+
 
 
 
