@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Make the navbar full width */
+    height: auto; /* Auto height for responsiveness */
+    padding: 10px; /* Adjust padding for mobile */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .sidebar-image {
+    width: 50px; /* Smaller width for mobile */
+    height: 50px; /* Smaller height for mobile */
+    object-fit: cover;
+    border-radius: 10%;
+    margin-left: 10px; /* Adjust margin */
+  }
+
+  .nav-text {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Smaller gap for mobile */
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px; /* Smaller font size for mobile */
+    font-weight: 700;
+  }
+  footer {
+    
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Adjust footer width */
+    margin: 0 auto;
+    border-radius: 15px 15px 0 0;
+    left: 0; /* Align to the left */
+    transform: translateX(0); /* Remove unnecessary centering adjustment */
+    font-family: Arial, Helvetica, sans-serif;;
+    font-size: medium;
+    font-weight: 300;
+    z-index: 999;
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar-image {
+      width: 100px; /* Larger size for desktop */
+      height: 100px;
+    }
+  }
+
+/* For mobile responsiveness */
+@media (max-width: 640px) {
+  .nav-container {
+    flex-direction: row; /* Stack items vertically */
+    padding: 10px;
+  }
+  .nav-text {
+    flex-direction: row; /* Stack links vertically */
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .sidebar-image {
+    margin: 0 auto; /* Center image */
+  }
+  footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
+}
