@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image"; 
+import Image from "next/image";
 import {useState} from "react";
 import React from "react";
 import { FaBars } from "react-icons/fa";
@@ -46,7 +46,7 @@ return (
             <nav className="md:hidden lg:hidden">
               <ul className="flex flex-col justify-center gap-4">
                 <li>
-                  Home
+                <Link href="/" className="text-white hover:text-yellow-300">Home</Link>
                 </li>
                 <li>
                   About
